@@ -1,15 +1,18 @@
 package ie.atu;
 
-public class Ship
+public super class Ship
 {
     private String ship;
     private String year;
     private int number;
 
+    public Ship() {
+    }
+
     public Ship(String ship, String year, int number) {
-        this.ship = "";
-        this.year = "";
-        this.number = 0;
+        this.ship = ship;
+        this.year = year;
+        this.number = number;
     }
 
     public String getShip() {
@@ -34,5 +37,14 @@ public class Ship
 
     public void setNumber(int number) {
         this.number = number;
+    }
+
+    @Override
+    public String toString() {
+        return "Ship{" +
+                "ship='" + ship + '\'' +
+                ", year='" + year + '\'' +
+                ", number=" + number +
+                '}';
     }
 }
