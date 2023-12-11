@@ -4,12 +4,10 @@ public class Ferry extends Ship
 {
     private int passengers;
 
-    public Ferry(int passengers) {
-        this.passengers = passengers;
+    public Ferry(){
     }
 
-    public Ferry(String ship, String year, int number, int passengers) {
-        super(ship, year, number);
+    public Ferry(String name, String year, int number, int passengers) {
         this.passengers = passengers;
     }
 
@@ -22,5 +20,10 @@ public class Ferry extends Ship
     }
 
 
-
+    @Override
+    public String toString() {
+        return "Ferry{" + super.toString() +
+                "passengers=" + passengers +
+                '}';
+    }
 }
